@@ -24,9 +24,6 @@ matrix:
       os: windows
       script: powershell .ci/setup_appveyor.ps1
 
-before_install:
-  - cd .ci/ && source setup_travis.sh && cd ../
-
 notifications:
   email:
     on_failure: always
