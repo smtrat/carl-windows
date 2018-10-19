@@ -9,15 +9,6 @@ cache:
     - $HOME/.sonar/cache
     - build/resources
 
-addons:
-  apt:
-    sources: &sources_base
-      - ubuntu-toolchain-r-test
-    packages: &packages_base
-      - texinfo
-      - time
-      - uuid-dev
-
 matrix:
   include:
     - stage: build
