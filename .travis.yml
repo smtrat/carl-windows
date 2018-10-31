@@ -13,4 +13,5 @@ matrix:
   include:
     - stage: build
       os: windows
+      language: shell
       script: powershell .ci/setup_appveyor.ps1
