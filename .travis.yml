@@ -1,6 +1,4 @@
 language: generic
-sudo: false
-dist: trusty
 
 matrix:
   include:
