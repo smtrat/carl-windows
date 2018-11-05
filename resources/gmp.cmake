@@ -16,12 +16,11 @@ if(UNIX)
 elseif(WIN32)
 	ExternalProject_Add(
 		GMP-EP
-		URL "http://mpir.org/mpir-3.0.0.zip"
-		URL_MD5 0ac60c2e6e183d401d1f876ca177cdb7
+		GIT_REPOSITORY "https://github.com/BrianGladman/mpir.git"
 		DOWNLOAD_NO_PROGRESS 1
 		CONFIGURE_COMMAND ""
 		BUILD_IN_SOURCE YES
-		BUILD_COMMAND cd build.vc15
+		BUILD_COMMAND cd msvc/vs17
 		COMMAND ./msbuild.bat gc dll x64 RELEASE
 		COMMAND ./msbuild.bat gc dll x64 DEBUG
 		COMMAND ./msbuild.bat gc lib x64 RELEASE
