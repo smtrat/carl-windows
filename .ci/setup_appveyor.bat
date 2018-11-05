@@ -1,5 +1,5 @@
 choco install -y visualstudio2017-workload-vctools
-rem choco install -y boost-msvc-12
+choco install -y boost-msvc-12
 
 echo "Looking for preinstalled Boost"
 rem $env:PATH += ";$BOOST_ROOT"
