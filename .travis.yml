@@ -1,3 +1,8 @@
 os: windows
 language: shell
+
+cache:
+  directories:
+    - build/resources
+
 script: .ci/setup_appveyor.bat
