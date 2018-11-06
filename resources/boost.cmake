@@ -38,8 +38,6 @@ add_imported_library(Boost STATIC "${static_libs}" "${INSTALL_DIR}/include" ${BO
 unset(shared_libs)
 unset(static_libs)
 
-add_dependencies(Boost-EP GMPXX_SHARED GMPXX_STATIC)
-
 add_dependencies(Boost_SHARED Boost-EP)
 add_dependencies(Boost_STATIC Boost-EP)
 add_dependencies(resources Boost_SHARED Boost_STATIC)
