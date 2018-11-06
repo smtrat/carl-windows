@@ -20,6 +20,7 @@ elseif(WIN32)
 		DOWNLOAD_NO_PROGRESS 1
 		CONFIGURE_COMMAND ""
 		BUILD_IN_SOURCE YES
+		BUILD_LOG YES
 		BUILD_COMMAND cd msvc/vs17
 		# First two calls fail, see for example https://travis-ci.org/smtrat/carl-windows/builds/451301207#L264
 		# After that, it builds fine...

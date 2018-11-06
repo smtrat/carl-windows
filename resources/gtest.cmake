@@ -1,9 +1,13 @@
+if(WIN32)
+	set(CMAKE_ADDITIONAL_ARGS "CMAKE_CXX_FLAGS=/D_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING")
+endif()
 ExternalProject_Add(
     GTest-EP
 	URL https://github.com/google/googletest/archive/release-${GTEST_VERSION}.zip
 	URL_MD5 ${GTEST_ZIPHASH}
 	DOWNLOAD_NO_PROGRESS 1
 	UPDATE_COMMAND ""
+	CMAKE_ARGS ${CMAKE_ADDITIONAL_ARGS}
 	BUILD_COMMAND cmake --build . --config ${CMAKE_BUILD_TYPE} --target gtest
 	COMMAND cmake --build . --config ${CMAKE_BUILD_TYPE} --target gtest_main
 	INSTALL_COMMAND ""
