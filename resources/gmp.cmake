@@ -21,10 +21,10 @@ elseif(WIN32)
 		CONFIGURE_COMMAND ""
 		BUILD_IN_SOURCE YES
 		BUILD_COMMAND cd msvc/vs17
-		COMMAND ./msbuild.bat gc DLL x64 RELEASE
-		COMMAND ./msbuild.bat gc DLL x64 DEBUG
 		COMMAND ./msbuild.bat gc LIB x64 RELEASE
 		COMMAND ./msbuild.bat gc LIB x64 DEBUG
+		COMMAND ./msbuild.bat gc DLL x64 RELEASE
+		COMMAND ./msbuild.bat gc DLL x64 DEBUG
 		INSTALL_COMMAND ${CMAKE_COMMAND} -E make_directory <INSTALL_DIR>/lib
 		COMMAND ${CMAKE_COMMAND} -E make_directory <INSTALL_DIR>/include
 		COMMAND cp <SOURCE_DIR>/dll/x64/${CMAKE_BUILD_TYPE}/mpir${DYNAMIC_EXT} <INSTALL_DIR>/lib/gmp${DYNAMIC_EXT}
