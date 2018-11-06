@@ -21,6 +21,8 @@ elseif(WIN32)
 		CONFIGURE_COMMAND ""
 		BUILD_IN_SOURCE YES
 		BUILD_COMMAND cd msvc/vs17
+		COMMAND ./msbuild.bat gc DLL x64 RELEASE
+		COMMAND ./msbuild.bat gc DLL x64 DEBUG
 		COMMAND ./msbuild.bat gc LIB x64 RELEASE
 		COMMAND ./msbuild.bat gc LIB x64 DEBUG
 		COMMAND ./msbuild.bat gc DLL x64 RELEASE
