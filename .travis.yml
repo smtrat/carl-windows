@@ -5,4 +5,9 @@ cache:
   directories:
     - build/resources
 
-script: .ci/setup_appveyor.bat
+matrix:
+  include:
+    - stage: dependencies
+      script: TASK=dependencies .ci/setup_appveyor.bat
+    - stage: build
+      script: .ci/setup_appveyor.bat
